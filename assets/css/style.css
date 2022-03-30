@@ -40,6 +40,20 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: "HelveticaNeue-Medium";
+  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
+  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeue-Medium";
+  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
+  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
 ::before, *::after {
   margin: 0;
   padding: 0;
