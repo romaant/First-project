@@ -1,60 +1,42 @@
-@charset "UTF-8";
-.header {
-  width: 100%;
-  height: 80px;
-  background-color: purple;
-}
-
+/* Fonts */
 @font-face {
-  font-family: "Bitter700";
-  src: url("../fonts/Bitter700.eot");
-  src: local("☺"), url("../fonts/Bitter700.woff") format("woff"), url("../fonts/Bitter700.ttf") format("truetype"), url("../fonts/Bitter700.svg") format("svg");
+  font-family: "os_l";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Light.woff2") format("woff2"), url("/assets/fonts/OpenSans-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "os_n";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("/assets/fonts/OpenSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "os_m";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Medium.woff2") format("woff2"), url("/assets/fonts/OpenSans-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "os_sb";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("/assets/fonts/OpenSans-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "os_b";
   font-weight: 700;
   font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("/assets/fonts/OpenSans-Bold.woff") format("woff");
 }
 @font-face {
-  font-family: "BitterRegular";
-  src: url("../fonts/Bitter-Regular.eot");
-  src: local("☺"), url("../fonts/Bitter-Regular.woff") format("woff"), url("../fonts/Bitter-Regular.ttf") format("truetype"), url("../fonts/Bitter-Regular.svg") format("svg");
-  font-weight: normal;
+  font-family: "os_eb";
+  font-weight: 800;
   font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("/assets/fonts/OpenSans-ExtraBold.woff") format("woff");
 }
-@font-face {
-  font-family: "HelveticaNeueBold";
-  src: url("../fonts/HelveticaNeue-BoldCond.eot");
-  src: local("☺"), url("../fonts/HelveticaNeue-BoldCond.woff") format("woff"), url("../fonts/HelveticaNeue-BoldCond.ttf") format("truetype"), url("../fonts/HelveticaNeue-BoldCond.svg") format("svg");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Helveticaneue-roman";
-  src: url("../fonts/helveticaneuecyr-roman.eot");
-  src: local("☺"), url("../fonts/helveticaneuecyr-roman.woff") format("woff"), url("../fonts/helveticaneuecyr-roman.ttf") format("truetype"), url("../fonts/helveticaneuecyr-roman.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue-Medium";
-  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
-  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue-Medium";
-  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
-  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue-Medium";
-  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
-  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-::before, *::after {
+/* Reset */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   border: 0;
@@ -78,7 +60,6 @@ html, body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  margin: 0;
 }
 
 input, button, textarea {
@@ -117,9 +98,29 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
-  margin: 0;
 }
 
-p {
-  margin: 0;
+/*Container*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*Section1*/
+.map {
+  max-width: 100%;
+  height: auto;
+}
+.map .map-decor {
+  width: 100%;
+}
+
+/*Section2*/
+.info {
+  max-width: 100%;
+  height: auto;
+}
+.info .text {
+  width: auto;
 }

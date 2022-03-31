@@ -1,0 +1,27 @@
+
+/*Container*/ 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*Section1*/
+.map {
+    max-width: 100%;
+    height: auto;
+        .map-decor {
+            width: 100%;
+        }
+} 
+
+/*Section2*/
+.info {
+    max-width: 100%;
+    height: auto;
+        .text {
+            width: auto;
+        }
+} 
+
+
