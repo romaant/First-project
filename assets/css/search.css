@@ -1,0 +1,21 @@
+#search {
+  content: url("/assets/img/header/search-form.png");
+}
+
+.search {
+  display: none;
+  position: relative;
+}
+
+.main-search {
+  position: relative;
+}
+
+.search-active {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0px;
+  top: 20px;
+}
