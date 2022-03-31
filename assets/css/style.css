@@ -100,27 +100,87 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
-/*Container*/
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-/*Section1*/
-.map {
-  max-width: 100%;
-  height: auto;
-}
-.map .map-decor {
+.header {
   width: 100%;
+  height: 80px;
+  background-color: purple;
 }
 
-/*Section2*/
-.info {
-  max-width: 100%;
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  height: 100%;
+}
+
+.header_title {
+  background-color: #ECECEC;
+  height: 5rem;
+}
+.header_title .title_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5rem;
+}
+.header_title .title_content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "os_sb";
+  color: #7F8C8C;
+  text-transform: uppercase;
+}
+.header_title .title_content .title_right {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.header_title .title_content .title_right a {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: "os_m";
+  color: #7F8C8C;
+  padding: 3px;
+}
+.header_title .title_content .title_right a:hover {
+  color: red;
+}
+
+.section_1 {
+  margin-top: 3.75rem;
   height: auto;
 }
-.info .text {
-  width: auto;
+.section_1 .title_1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  font-family: "os_m";
+  color: #E1524B;
+}
+.section_1 .suptitle_1 {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "os_m";
+  color: #7F8C8C;
+}
+
+.grid_1 {
+  padding-top: 3.75rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "user_profile  tweets" "follow_block tweets" "trends tweets" "footer tweets" ". tweets";
+  -ms-grid-columns: 1fr, 2fr, 1fr;
+  grid-template-columns: 1fr, 2fr, 1fr;
+  -ms-grid-rows: 1fr, 2fr;
+  grid-template-rows: 1fr, 2fr;
+  gap: 15px;
 }
