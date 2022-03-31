@@ -101,9 +101,153 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
+  position: relative;
   width: 100%;
   height: 80px;
-  background-color: purple;
+  background-color: #76c7c0;
+  background-image: url(/assets/img/header/Path.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  z-index: 2;
+}
+.header .header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+.header .header-nav .header-logo {
+  background: url(/assets/img/header/logo-header.png);
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 115px;
+}
+.header .header-nav .menu-item {
+  text-transform: uppercase;
+  font-family: "os_n";
+  font-weight: 400;
+  padding: 5px 15px;
+  margin: 0 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+.header .header-nav .menu-item:hover:not(#portfolio) {
+  background-color: #62a29e;
+  -webkit-box-shadow: 0 5px 0 0 #528b86;
+          box-shadow: 0 5px 0 0 #528b86;
+}
+.header .header-nav #portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .header-nav #portfolio:hover {
+  background-color: #e8645a !important;
+  -webkit-box-shadow: 0 5px 0 0 #e2534b !important;
+          box-shadow: 0 5px 0 0 #e2534b !important;
+}
+.header .header-nav #portfolio:hover::before {
+  width: 10px;
+  content: url("/assets/img/header/arrow-down.png");
+}
+.header .header-nav #portfolio:before {
+  width: 10px;
+  content: url("/assets/img/header/arrow-right.png");
+}
+.header .header-nav #portfolio p {
+  margin: 0px 5px;
+}
+.header .header-nav #portfolio .dropdownmenu {
+  position: absolute;
+  display: none;
+  background-color: #e2534b;
+  border-radius: 5px;
+  width: 300px;
+  top: 75px;
+  position: absolute;
+  color: white;
+}
+.header .header-nav #portfolio .dropdownmenu:after {
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #e2534b;
+  content: "";
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+}
+.header .header-nav #portfolio .dropdownmenu .portfolio-page {
+  background-color: #e8645a;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 5px;
+  padding: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .header-nav #portfolio .dropdownmenu .portfolio-page:before {
+  content: url("/assets/img/header/arrow-right.png");
+}
+.header .header-nav #portfolio .dropdownmenu .portfolio-page:hover {
+  background-color: #76c7c0;
+}
+.header .header-nav #portfolio .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.header .header-nav .portfolio-active {
+  background-color: #e8645a !important;
+  -webkit-box-shadow: 0 5px 0 0 #e2534b !important;
+          box-shadow: 0 5px 0 0 #e2534b !important;
+}
+.header .header-nav .portfolio-active::before {
+  width: 10px;
+  content: url("/assets/img/header/arrow-down.png") !important;
+}
+
+#search {
+  content: url("/assets/img/header/search-form.png");
+}
+
+.search {
+  display: none;
+  position: relative;
+}
+
+.main-search {
+  position: relative;
+}
+
+.search-active {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0px;
+  top: 20px;
 }
 
 .container {
