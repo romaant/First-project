@@ -1,3 +1,92 @@
 @import "fonts.scss";
 @import "reset.scss";
 @import "header.scss";
+
+// Mixin
+
+@mixin fontv($x,$c,$v,$b) {
+    font-size: $x;
+    font-weight: $c;
+    font-family: $v;
+    color: $b;
+  }
+  
+  @mixin flex($q,$w,$e,$r) {
+    display: $q;
+    flex-flow: $w;
+    justify-content: $e;
+    align-items: $r;
+  }
+
+// Container
+
+.container {
+    margin: 0 auto;
+    width: 80vw;
+    height: 100%;
+}
+
+// Header
+
+@import "about_us.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

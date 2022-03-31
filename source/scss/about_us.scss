@@ -1,0 +1,84 @@
+// Mixin
+
+@mixin fontv($x,$c,$v,$b) {
+    font-size: $x;
+    font-weight: $c;
+    font-family: $v;
+    color: $b;
+  }
+  
+  @mixin flex($q,$w,$e,$r) {
+    display: $q;
+    flex-flow: $w;
+    justify-content: $e;
+    align-items: $r;
+  }
+
+// Header
+
+.header_title {
+    background-color: #ECECEC;
+    height: 5rem;
+    .title_content {
+        @include flex(flex,row nowrap, space-between , center );
+        min-height: 5rem;
+        h2 {
+            @include fontv(1.25rem, 600, 'os_sb',#7F8C8C );
+            text-transform: uppercase;
+        }
+        .title_right {
+            display: inline-flex;
+            a {
+                @include fontv(0.75rem, 500, 'os_m',#7F8C8C );
+                padding: 3px;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+// Section 1
+
+.section_1 {
+    margin-top: 3.75rem;
+    height: auto;
+    .title_1 {
+        @include fontv(1.875rem, 500,'os_m' ,#E1524B );
+    }
+    .suptitle_1 {
+        margin-top: 1rem;
+        @include fontv(0.875rem, 500, 'os_m',#7F8C8C );
+    }
+}
+
+.grid_1 {
+    padding-top: 3.75rem;
+    display: grid;
+    grid-template-areas: "user_profile  tweets"
+                         "follow_block tweets"
+                         "trends tweets"
+                         "footer tweets"
+                         ". tweets";
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 1fr, 2fr;
+    gap: 15px;                   
+}
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+

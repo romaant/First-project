@@ -1,60 +1,42 @@
-@charset "UTF-8";
-.header {
-  width: 100%;
-  height: 80px;
-  background-color: purple;
-}
-
+/* Fonts */
 @font-face {
-  font-family: "Bitter700";
-  src: url("../fonts/Bitter700.eot");
-  src: local("☺"), url("../fonts/Bitter700.woff") format("woff"), url("../fonts/Bitter700.ttf") format("truetype"), url("../fonts/Bitter700.svg") format("svg");
+  font-family: "os_l";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Light.woff2") format("woff2"), url("/assets/fonts/OpenSans-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "os_n";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Regular.woff2") format("woff2"), url("/assets/fonts/OpenSans-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "os_m";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Medium.woff2") format("woff2"), url("/assets/fonts/OpenSans-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "os_sb";
+  font-weight: 600;
+  font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-SemiBold.woff2") format("woff2"), url("/assets/fonts/OpenSans-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "os_b";
   font-weight: 700;
   font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-Bold.woff2") format("woff2"), url("/assets/fonts/OpenSans-Bold.woff") format("woff");
 }
 @font-face {
-  font-family: "BitterRegular";
-  src: url("../fonts/Bitter-Regular.eot");
-  src: local("☺"), url("../fonts/Bitter-Regular.woff") format("woff"), url("../fonts/Bitter-Regular.ttf") format("truetype"), url("../fonts/Bitter-Regular.svg") format("svg");
-  font-weight: normal;
+  font-family: "os_eb";
+  font-weight: 800;
   font-style: normal;
+  src: local("Open-Sans"), url("/assets/fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("/assets/fonts/OpenSans-ExtraBold.woff") format("woff");
 }
-@font-face {
-  font-family: "HelveticaNeueBold";
-  src: url("../fonts/HelveticaNeue-BoldCond.eot");
-  src: local("☺"), url("../fonts/HelveticaNeue-BoldCond.woff") format("woff"), url("../fonts/HelveticaNeue-BoldCond.ttf") format("truetype"), url("../fonts/HelveticaNeue-BoldCond.svg") format("svg");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Helveticaneue-roman";
-  src: url("../fonts/helveticaneuecyr-roman.eot");
-  src: local("☺"), url("../fonts/helveticaneuecyr-roman.woff") format("woff"), url("../fonts/helveticaneuecyr-roman.ttf") format("truetype"), url("../fonts/helveticaneuecyr-roman.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue-Medium";
-  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
-  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue-Medium";
-  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
-  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "HelveticaNeue-Medium";
-  src: url("../fonts/HelveticaNeueLTPro-Md.eot");
-  src: local("☺"), url("../fonts/HelveticaNeueLTPro-Md.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Md.ttf") format("truetype"), url("../fonts/HelveticaNeueLTPro-Md.svg") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-::before, *::after {
+/* Reset */
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   border: 0;
@@ -78,7 +60,6 @@ html, body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  margin: 0;
 }
 
 input, button, textarea {
@@ -117,9 +98,89 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
-  margin: 0;
 }
 
-p {
-  margin: 0;
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: purple;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  height: 100%;
+}
+
+.header_title {
+  background-color: #ECECEC;
+  height: 5rem;
+}
+.header_title .title_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5rem;
+}
+.header_title .title_content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "os_sb";
+  color: #7F8C8C;
+  text-transform: uppercase;
+}
+.header_title .title_content .title_right {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.header_title .title_content .title_right a {
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: "os_m";
+  color: #7F8C8C;
+  padding: 3px;
+}
+.header_title .title_content .title_right a:hover {
+  color: red;
+}
+
+.section_1 {
+  margin-top: 3.75rem;
+  height: auto;
+}
+.section_1 .title_1 {
+  font-size: 1.875rem;
+  font-weight: 500;
+  font-family: "os_m";
+  color: #E1524B;
+}
+.section_1 .suptitle_1 {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "os_m";
+  color: #7F8C8C;
+}
+
+.grid_1 {
+  padding-top: 3.75rem;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "user_profile  tweets" "follow_block tweets" "trends tweets" "footer tweets" ". tweets";
+  -ms-grid-columns: 1fr, 2fr, 1fr;
+  grid-template-columns: 1fr, 2fr, 1fr;
+  -ms-grid-rows: 1fr, 2fr;
+  grid-template-rows: 1fr, 2fr;
+  gap: 15px;
 }
